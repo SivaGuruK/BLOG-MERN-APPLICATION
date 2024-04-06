@@ -13,23 +13,22 @@ export default function DashSidebar() {
       }
     }, [location.search]);
   return (
-    <div>
+      <div>
       <Sidebar className='w-full md:w-56'>
         <Sidebar.Items>
           <Sidebar.ItemGroup>
-            <Link to="dashboard?tab=profile">
+            <Link to="/dashboard?tab=profile">
               <Sidebar.Item
                 active={tab === "profile"}
                 icon={HiUser}
-                label={"User"}
+                label="Profile"
                 labelColor="dark"
-              >
-                Profile
-              </Sidebar.Item>
-              <Sidebar.Item icon={HiArrowSmRight} className="cursor-pointer">
-                Sign Out
-              </Sidebar.Item>
+                as="div"
+              />
             </Link>
+            <Sidebar.Item icon={HiArrowSmRight} className="cursor-pointer">
+              Sign Out
+            </Sidebar.Item>
           </Sidebar.ItemGroup>
         </Sidebar.Items>
       </Sidebar>
