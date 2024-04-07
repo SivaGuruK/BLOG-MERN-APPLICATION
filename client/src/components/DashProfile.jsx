@@ -1,4 +1,4 @@
-import { Alert, Button, Modal, ModalBody, TextInput } from "flowbite-react";
+import { Alert, Button, Modal,  TextInput } from "flowbite-react";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import {
@@ -74,6 +74,7 @@ export default function DashProfile() {
 
         setImageFileUploadProgress(progress.toFixed(0));
       },
+      // eslint-disable-next-line no-unused-vars
       (error) => {
         setImageFileUploadError(
           "Could not upload image (File must be less than 2MB)"
@@ -291,7 +292,7 @@ export default function DashProfile() {
             </h3>
             <div className="flex justify-center gap-4">
               <Button color="failure" onClick={handleDeleteUser}>
-                Yes, I'm sure
+                 Yes Iam Sure
               </Button>
               <Button color="gray" onClick={() => setShowModal(false)}>
                 No, cancel
